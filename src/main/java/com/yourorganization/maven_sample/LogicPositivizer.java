@@ -13,7 +13,7 @@ import com.github.javaparser.utils.SourceRoot;
 import java.nio.file.Paths;
 
 /**
- * Some code that uses JavaParser.
+ * Some code that uses JavaParser. change inet
  */
 public class LogicPositivizer {
     public static void main(String[] args) {
