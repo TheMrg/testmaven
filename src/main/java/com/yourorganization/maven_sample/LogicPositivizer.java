@@ -30,7 +30,7 @@ public class LogicPositivizer {
         // Our sample is in the root of this directory, so no package name.
         CompilationUnit cu = sourceRoot.parse("", "Blabla.java");
 
-        Log.info("Positivizing next!");
+        Log.info("Positivizing next inet!");
         
         cu.accept(new ModifierVisitor<Void>() {
             /**
@@ -44,6 +44,7 @@ public class LogicPositivizer {
                     if (binaryExpr.getOperator() == BinaryExpr.Operator.NOT_EQUALS && n.getElseStmt().isPresent()) {
                         /* It's a good idea to clone nodes that you move around.
                             JavaParser (or you) might get confused about who their parent is!
+                            
                         */
                         Statement thenStmt = n.getThenStmt().clone();
                         Statement elseStmt = n.getElseStmt().get().clone();
