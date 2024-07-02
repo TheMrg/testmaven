@@ -10,6 +10,7 @@ import com.github.javaparser.utils.CodeGenerationUtils;
 import com.github.javaparser.utils.Log;
 import com.github.javaparser.utils.SourceRoot;
 
+
 import java.nio.file.Paths;
 
 /**
@@ -29,7 +30,7 @@ public class LogicPositivizer {
         // Our sample is in the root of this directory, so no package name.
         CompilationUnit cu = sourceRoot.parse("", "Blabla.java");
 
-        Log.info("Positivizing!");
+        Log.info("Positivizing next!");
         
         cu.accept(new ModifierVisitor<Void>() {
             /**
